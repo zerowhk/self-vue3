@@ -1,0 +1,14 @@
+{
+  "name": "@vue/shared",
+  "version": "1.0.0",
+  "main": "dist/shared.cjs.js",
+  "module": "dist/shared.esm.js",
+  "license": "MIT",
+  "buildOptions": {
+    "name": "VueShared",
+    "format": [
+      "cjs",
+      "esm"
+    ]
+  }
+}

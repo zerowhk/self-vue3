@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script src="../node_modules/@vue/reactivity/dist/reactivity.global.js"></script>
+    <script>
+        const { reactive, readonly, effect, ref } = VueReactivity
+        // const obj = { name: 'zs', age: 18 }
+        // const p = reactive(obj)
+        // effect(() => {
+        //     console.log(p.age)
+        // })
+        // setTimeout(() => {
+        //     p.age = 18
+        // })
+
+        // const arr = reactive([1, 2, 3])
+        // effect(() => {
+        //     app.innerHTML = arr[2] + arr.length
+        // })
+        // setTimeout(() => {
+        //     arr.length = 5
+        // }, 1000)
+
+        const name = ref('zs')
+        console.log(name)
+
+        effect(() => {
+            app.innerHTML = name.value
+        })
+
+        setTimeout(() => {
+            name.value = 'ls'
+            name.value = 'zs'
+        }, 1000)
+    </script>
+</body>
+</html>
